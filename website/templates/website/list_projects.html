@@ -1,0 +1,15 @@
+{% load static %}
+
+<link rel='stylesheet' type='text/css' href="{% static 'website/css/project.css' %}">
+
+<div class="project_container">
+    <h3>Projects</h3>
+    {% for project in data.projects %}
+    <div class="project">
+        <h4>{{project.name}}</h4>
+        <a target="blank" href="{{project.live_url}}">view</a>
+        <a target="blank" href="{{project.github_url}}">github</a>
+        <p>{{project.description}}</p>
+    </div>
+    {% endfor %}
+</div>

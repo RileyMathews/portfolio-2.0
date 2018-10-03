@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView
-from website.models import Technology
+from website.models import Technology, Project
 from django.shortcuts import render
 
 
@@ -14,7 +14,8 @@ def index_view(request):
     """
     print("loading index")
     technologies = Technology.objects.all()
+    projects = Project.objects.all()
 
-    data = {"technologies": technologies}
+    data = {"technologies": technologies, "projects": projects}
     return render(request, "website/index.html", {"data": data})
 

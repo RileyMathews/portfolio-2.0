@@ -1,0 +1,11 @@
+.technology_container {
+    display: flex;
+}
+
+.technology_image {
+    height: 50px;
+}
+
+.technology + .technology {
+    margin-left: 4px;
+}

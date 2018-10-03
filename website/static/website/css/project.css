@@ -1,3 +1,19 @@
-.project {
+.card {
     border: 1px solid slategrey;
+    border-radius: 4px;
+}
+
+@media (min-width: 520px) {
+    .card {
+        max-width: 15rem;
+    }
+
+    .card + .card {
+        margin-left: 8px;
+    }
+
+    .card_container {
+        display: flex;
+        justify-content: center;
+    }
 }

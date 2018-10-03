@@ -1,0 +1,17 @@
+/* normalization */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* variables */
+element {
+    --primary-color: skyblue;
+    --secondary-color: slategrey;
+}
+
+
+/* helpers */
+.text-center {
+    text-align: center;
+}

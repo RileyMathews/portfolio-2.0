@@ -109,3 +109,6 @@ venv.bak/
 
 # environment file
 environment.json
+
+# collected static files
+./static

@@ -111,4 +111,4 @@ venv.bak/
 environment.json
 
 # collected static files
-./static
+/static

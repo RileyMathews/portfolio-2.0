@@ -11,21 +11,29 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import json
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# environment settings switching
+with open(f'{BASE_DIR}/portfolio/environment.json') as file:
+    data = json.load(file)
+    secret_key = data['secret_key']
+    environment = data['environment']
+
+if environment == 'development':
+    DEBUG = True
+    ALLOWED_HOSTS = []
+else:
+    DEBUG = False
+    ALLOWED_HOSTS = ['192.241.132.90', 'rileymathews.com']
+
+SECRET_KEY = secret_key
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "3x-h53448$)u&(15&dx)w96!she5803l(7nn$pd5p9(^_4%_p#"
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition

@@ -3,6 +3,8 @@
 <link rel='stylesheet' type='text/css' href="{% static 'website/css/technology.css' %}">
 <div class="technology_container">
     {% for technology in data.technologies %}
-    <img src="{{technology.picture_url}}" class="technology_image technology">
+    <div class="technology">
+        <img src="{{technology.picture_url}}" class="technology_image">
+    </div>
     {% endfor %}
 </div>

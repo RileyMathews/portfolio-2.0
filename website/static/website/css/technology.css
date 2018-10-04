@@ -1,12 +1,32 @@
 .technology_container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(112, 128, 144, 0.24);
+    border-radius: 4px;
+    padding: 1rem 4rem;
+}
+
+.technology {
+    flex: 1 1 auto;
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
 }
 
 .technology_image {
     height: 50px;
 }
 
-.technology + .technology {
-    margin-left: 4px;
+
+/* .technology_container {
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: auto auto auto auto;
 }
+
+.technology_image {
+    height: 50px;
+} */

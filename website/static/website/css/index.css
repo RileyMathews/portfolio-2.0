@@ -24,6 +24,10 @@ p
     color: white;
 }
 
+a {
+    color: rgb(97, 97, 255);
+}
+
 a:visited {
     color: rgb(179, 87, 179);
 }

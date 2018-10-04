@@ -26,7 +26,7 @@ if environment == 'development':
     DEBUG = True
     ALLOWED_HOSTS = ['*']
 else:
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = secret_key

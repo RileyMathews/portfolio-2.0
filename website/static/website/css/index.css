@@ -24,6 +24,10 @@ p
     color: white;
 }
 
+a:visited {
+    color: rgb(179, 87, 179);
+}
+
 /* variables */
 element {
     --primary-color: skyblue;
@@ -41,3 +45,4 @@ element {
         margin: 0 10%;
     }
 }
+

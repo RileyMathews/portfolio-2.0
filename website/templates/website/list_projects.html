@@ -8,8 +8,8 @@
     {% for project in data.projects %}
     <div class="card text-center">
         <h4>{{project.name}}</h4>
-        <a target="blank" href="{{project.live_url}}">view</a>
-        <a target="blank" href="{{project.github_url}}">github</a>
+        <a target="blank" href="{{project.live_url}}"><i class="fas fa-globe fa-lg"></i></a>
+        <a target="blank" href="{{project.github_url}}"><i class="fab fa-github fa-lg"></i></a>
         <p>{{project.description}}</p>
     </div>
     {% endfor %}

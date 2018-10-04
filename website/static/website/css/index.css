@@ -28,6 +28,14 @@ a:visited {
     color: rgb(179, 87, 179);
 }
 
+a:hover {
+    color: rgb(180, 29, 29);
+}
+
+a:active {
+    color: rgb(24, 218, 24);
+}
+
 /* variables */
 element {
     --primary-color: skyblue;
@@ -43,6 +51,17 @@ element {
 @media (min-width: 1024px) {
     .container {
         margin: 0 10%;
+    }
+}
+
+/* text */
+.bio {
+    text-align: center;
+}
+
+@media (min-width: 520px) {
+    .bio {
+        text-align: left;
     }
 }
 

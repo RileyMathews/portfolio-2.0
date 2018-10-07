@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from .category import Category
 
 
 class BlogPost(models.Model):
@@ -8,6 +9,7 @@ class BlogPost(models.Model):
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    categories = models.ManyToManyField(Category)
 
     def publish(self):
         self.published_date = timezone.now()

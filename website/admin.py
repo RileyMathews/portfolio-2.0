@@ -5,3 +5,4 @@ from website import models
 admin.site.register(models.Technology)
 admin.site.register(models.Project)
 admin.site.register(models.Bio)
+admin.site.register(models.BlogPost)

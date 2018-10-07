@@ -5,6 +5,7 @@
 .card {
     border: 1px solid slategrey;
     border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.699)
 }
 
 .card + .card {

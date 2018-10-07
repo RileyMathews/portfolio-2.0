@@ -24,10 +24,10 @@ with open(f'{BASE_DIR}/portfolio/environment.json') as file:
 
 if environment == 'development':
     DEBUG = True
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = []
 else:
     DEBUG = False
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['rileymathews.com']
 
 SECRET_KEY = secret_key
 

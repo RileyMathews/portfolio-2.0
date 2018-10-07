@@ -1,4 +1,8 @@
 /* normalization */
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,7 +13,9 @@ body {
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    height: 100%;
 }
 
 /* element level css */
@@ -60,23 +66,13 @@ element {
     margin-top: 5rem;
 }
 
-
+.container {
+    flex: 1 0 auto;
+}
 
 .headshot {
     height: 200px;
     border-radius: 50%;
-}
-
-.contact {
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-    padding: 2rem;
-    background-color: rgb(64, 72, 80);
-}
-
-.contact a + a {
-    margin-left: 1em;
 }
 
 #projects {
@@ -117,6 +113,20 @@ element {
 
 .technology_image {
     height: 50px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(64, 72, 80);
+    margin-top: 3em;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+footer a + a {
+    margin-left: 1rem;
 }
 
 @media (min-width: 520px) {

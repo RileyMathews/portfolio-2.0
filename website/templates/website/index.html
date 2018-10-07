@@ -15,13 +15,14 @@
 </head>
 
 <body>
-    <div class="container">
-        {% include './home_banner.html' %}
-        {% include './list_technologies.html' %}
-        {% include './bio.html' %}
-        {% include './list_projects.html' %}
-    </div>
-    {% include './contact.html' %}
+    <a href="{% url 'website:new_post' %}" class="top-menu">new post</a>
+        <div class="container">
+            {% include './home_banner.html' %}
+            {% include './list_technologies.html' %}
+            {% include './bio.html' %}
+            {% include './list_projects.html' %}
+        </div>
+        {% include './contact.html' %}
 
 
 </body>

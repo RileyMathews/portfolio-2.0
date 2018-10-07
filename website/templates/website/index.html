@@ -15,7 +15,9 @@
 </head>
 
 <body>
+    {% if user.is_authenticated %}
     <a href="{% url 'website:new_post' %}" class="top-menu">new post</a>
+    {% endif %}
         <div class="container">
             {% include './home_banner.html' %}
             {% include './list_technologies.html' %}

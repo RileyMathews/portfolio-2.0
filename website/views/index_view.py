@@ -15,7 +15,7 @@ def index_view(request):
     print("loading index")
     technologies = Technology.objects.all()
     projects = Project.objects.all()
-    bio = Bio.objects.get(pk=1)
+    bio = Bio.objects.all()[0]
 
     data = {"technologies": technologies, "projects": projects, "bio": bio}
     return render(request, "website/index.html", {"data": data})

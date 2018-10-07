@@ -1,0 +1,151 @@
+/* normalization */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
+    black;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+/* element level css */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+    color: white;
+}
+
+a {
+    color: rgb(97, 97, 255);
+}
+
+a:visited {
+    color: rgb(179, 87, 179);
+}
+
+a:hover {
+    color: rgb(180, 29, 29);
+}
+
+a:active {
+    color: rgb(24, 218, 24);
+}
+
+/* variables */
+element {
+    --primary-color: skyblue;
+    --secondary-color: slategrey;
+}
+
+
+/* helpers */
+.text-center {
+    text-align: center;
+}
+
+
+
+/* text */
+.bio {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+
+
+.headshot {
+    height: 200px;
+    border-radius: 50%;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 2rem;
+    background-color: rgb(64, 72, 80);
+}
+
+.contact a + a {
+    margin-left: 1em;
+}
+
+#projects {
+    margin-top: 5rem;
+}
+
+.card {
+    border: 1px solid slategrey;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.699)
+}
+
+.card + .card {
+    margin-top: 1rem;
+}
+
+.card a + a {
+    margin-left: 8px;
+}
+
+
+.technology_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgba(255, 255, 255, 0.445);
+    border-radius: 4px;
+}
+
+.technology {
+    flex: 1 1 auto;
+    padding: 1rem;
+    border: 1px solid black;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.technology_image {
+    height: 50px;
+}
+
+@media (min-width: 520px) {
+    .technology_container {
+        padding: 1rem 4rem;
+    }
+
+    .card {
+        max-width: 15rem;
+        padding: 1rem;
+    }
+
+    .card + .card {
+        margin-left: 8px;
+        margin-top: 0;
+    }
+
+    .card_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bio {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        margin: 0 10%;
+    }
+}

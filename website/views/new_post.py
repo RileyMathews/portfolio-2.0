@@ -1,5 +1,5 @@
 from website.forms import BlogPostForm
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.utils import timezone
 
 def new_post(request):
@@ -10,7 +10,7 @@ def new_post(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('post_detail', pk=post.pk)
+            return redirect('website:post_detail', pk=post.pk)
     else:
         form = BlogPostForm()
         return render(request, 'website/post_edit.html', {'form': form})

@@ -2,7 +2,10 @@
 {% block content %}
 <h1>blog posts</h1>
 {% for post in posts %}
-<a class="list-post-title" href="{% url 'website:post_detail' post.id %}">{{post.title}}</a>
-<p>{{post.text|safe|truncatechars:25}}</p>
+<div class="list-article">
+    <a class="list-post-title" href="{% url 'website:post_detail' post.id %}">{{post.title}}</a>
+    <p>{{post.subtitle|safe|truncatechars:100}}</p>
+    <div class="line"></div>
+</div>
 {% endfor %}
 {% endblock %}

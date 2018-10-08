@@ -1,22 +1,25 @@
-/* normalization */
-html {
-    height: 100%;
+/* variables */
+:root {
+    --primary-color: skyblue;
+    --secondary-color: rgb(50, 50, 50);
+    --white-faded: rgba(255, 255, 255, 0.5);
+    --black-faded: rgba(0, 0, 0, 0.5);
 }
 
+/* normalization */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    linear-gradient(var(--black-faded), var(--black-faded)),
     url("https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"),
     black;
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column; 
-    height: 100%;
 }
+
+
 
 /* element level css */
 h1,
@@ -28,6 +31,21 @@ h6,
 p
 {
     color: white;
+    margin-top: 0;
+}
+
+nav {
+    height: 50px;
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: white !important;
+    margin-left: 2em;
 }
 
 a {
@@ -46,12 +64,6 @@ a:active {
     color: rgb(24, 218, 24);
 }
 
-/* variables */
-element {
-    --primary-color: skyblue;
-    --secondary-color: slategrey;
-}
-
 
 /* helpers */
 .text-center {
@@ -67,7 +79,7 @@ element {
 }
 
 .container {
-    flex: 1 0 auto;
+    min-height: calc(100vh - 140px);
 }
 
 .headshot {
@@ -82,7 +94,7 @@ element {
 .card {
     border: 1px solid slategrey;
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.699)
+    background-color: var(--black-faded);
 }
 
 .card + .card {
@@ -98,7 +110,7 @@ element {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgba(255, 255, 255, 0.445);
+    background-color: var(--white-faded);
     border-radius: 4px;
 }
 
@@ -119,10 +131,9 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(64, 72, 80);
-    margin-top: 3em;
-    height: 70px;
-    flex-shrink: 0;
+    background-color: var(--secondary-color);
+    height: 50px;
+    margin-top: 20px;
 }
 
 footer a + a {

@@ -189,11 +189,11 @@ footer a + a {
 }
 
 /* blog text classes */
-.text-red {
+.blog-post-content red {
     color: tomato;
 }
 
-.code-block {
+.blog-post-content b {
     display: block;
     margin-left: 2em;
     padding: 1em;

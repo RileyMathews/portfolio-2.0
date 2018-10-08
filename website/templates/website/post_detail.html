@@ -2,7 +2,9 @@
 {% block content %}
 <div>
     <h1>{{post.title}}</h1>
-    <p>{{post.text|safe|linebreaks}}</p>
+    <div class="blog-post-content">
+        <p>{{post.text|safe|linebreaks}}</p>
+    </div>
 </div>
 
 {% if user.is_authenticated %}

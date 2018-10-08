@@ -8,7 +8,7 @@ def new_post(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.published_date = timezone.now()
+            # post.published_date = timezone.now()
             post.save()
             return redirect('website:post_detail', pk=post.pk)
     else:

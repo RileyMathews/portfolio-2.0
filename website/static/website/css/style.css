@@ -193,11 +193,19 @@ footer a + a {
     color: tomato;
 }
 
-.blog-post-content b {
+.blog-post-content code {
     display: block;
     margin-left: 2em;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.74);
+    background-color: var(--black-faded);
     border-radius: 4px;
     color: white;
+}
+
+.blog-post-content terminal {
+    display: block;
+    margin-left: 2em;
+    padding: 1em;
+    background-color: var(--black-faded);
+    color: lime;
 }

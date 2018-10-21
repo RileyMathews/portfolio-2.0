@@ -194,8 +194,9 @@ footer a + a {
 }
 
 .blog-post-content code {
+    border: 2px solid white;
     display: block;
-    margin-left: 2em;
+    margin: 0 2rem;
     padding: 1em;
     background-color: var(--black-faded);
     border-radius: 4px;
@@ -203,9 +204,11 @@ footer a + a {
 }
 
 .blog-post-content terminal {
+    border: 2px solid white;
     display: block;
-    margin-left: 2em;
+    margin: 0 2rem;
     padding: 1em;
     background-color: var(--black-faded);
+    border-radius: 4px;
     color: lime;
 }

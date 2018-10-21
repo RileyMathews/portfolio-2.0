@@ -9,6 +9,11 @@
 
 {% if user.is_staff %}
 <a href="{% url 'website:post_edit' post.id %}">edit</a>
+{% if post.published_date %}
+<a href="{% url 'website:unpublish_post' post.id %}">unpublish</a>
+{% else %}
 <a href="{% url 'website:publish_post' post.id %}">publish</a>
+{% endif %}
+
 {% endif %}
 {% endblock %}

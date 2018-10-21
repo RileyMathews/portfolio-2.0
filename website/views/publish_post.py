@@ -16,6 +16,5 @@ def publish_post(request, pk):
     if post.published_date != None:
         return render("error this post is already published")
     else:
-        post.published_date = timezone.now
-        post.save()
-        return redirect('website:post_detail', pk=pk)
+        post.publish()
+        return redirect('website:post_detail', pk=post.pk)

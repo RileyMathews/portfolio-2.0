@@ -14,6 +14,6 @@
 {% else %}
 <a href="{% url 'website:publish_post' post.id %}">publish</a>
 {% endif %}
-
+<a href="{% url 'website:delete_post' post.id %}">delete</a>
 {% endif %}
 {% endblock %}

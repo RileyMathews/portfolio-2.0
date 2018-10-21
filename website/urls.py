@@ -9,4 +9,5 @@ urlpatterns = [
     path('blog/post/<int:pk>/', views.post_detail, name='post_detail'),
     path('blog/post/new/', views.new_post, name='new_post'),
     path('blog/post/<int:pk>/edit/', views.post_edit, name='post_edit'),
+    path('blog/post/<int:pk>/publish/', views.publish_post, name='publish_post'),
 ]

@@ -7,7 +7,7 @@
     </div>
 </div>
 
-{% if user.is_authenticated %}
+{% if user.is_staff %}
 <a href="{% url 'website:post_edit' post.id %}">edit</a>
 {% endif %}
 {% endblock %}

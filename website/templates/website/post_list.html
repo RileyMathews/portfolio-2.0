@@ -8,7 +8,7 @@
 
     <p>Filed to:
     {% for category in post.categories.all %}
-    {{category}}.
+    <a href="{% url 'website:category_list' category.name %}">{{category}}</a>.
     {% endfor %}
     </p>
 

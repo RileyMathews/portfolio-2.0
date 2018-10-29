@@ -6,7 +6,7 @@ def new_post(request):
     if request.method == "POST":
         form = BlogPostForm(request.POST)
         if form.is_valid():
-            post = form.save(commit=False)
+            post = form.save()
             post.author = request.user
             # post.published_date = timezone.now()
             post.save()

@@ -2,6 +2,11 @@
 {% block content %}
 <div>
     <h1>{{post.title}}</h1>
+    <p>Filed to:
+        {% for category in post.categories.all %}
+        {{category}}.
+        {% endfor %}
+    </p>
     <div class="blog-post-content">
         <p>{{post.text|safe|linebreaks}}</p>
     </div>

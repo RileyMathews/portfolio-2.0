@@ -2,11 +2,21 @@
 {% block content %}
 <h1>blog posts</h1>
 {% for post in posts %}
+
 <div class="list-article">
     <a class="list-post-title" href="{% url 'website:post_detail' post.id %}">{{post.title}}</a>
+
+    <p>Filed to:
+    {% for category in post.categories.all %}
+    {{category}}.
+    {% endfor %}
+    </p>
+
     <p>Published on: {{post.published_date}}</p>
     <p>{{post.subtitle|safe|truncatechars:100}}</p>
     <div class="line"></div>
+
 </div>
+
 {% endfor %}
 {% endblock %}

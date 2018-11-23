@@ -6,7 +6,7 @@
         {% for project in data.projects %}
         <div class="card text-center">
             <h3>{{project.name}}</h3>
-            {% if project.live_url == None %}
+            {% if project.live_url != None %}
             <a class="icon-link" target="blank" href="{{project.live_url}}"><i class="fas fa-globe fa-2x"></i></a>
             {% endif %}
             <a class="icon-link" target="blank" href="{{project.github_url}}"><i class="fab fa-github fa-2x"></i></a>
